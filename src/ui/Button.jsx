@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-
+import styled, { css } from 'styled-components'
+/* eslint-disable no-unused-vars */
 const sizes = {
   small: css`
     font-size: 1.2rem;
@@ -18,8 +18,8 @@ const sizes = {
     padding: 1.2rem 2.4rem;
     font-weight: 500;
   `,
-};
-
+}
+/* eslint-disable no-unused-vars */
 const variations = {
   primary: css`
     color: var(--color-brand-50);
@@ -46,4 +46,18 @@ const variations = {
       background-color: var(--color-red-800);
     }
   `,
-};
+}
+
+const Button = styled.button`
+  border: none;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+
+  ${(props) => sizes[props.size]}
+  ${(props) => variations[props.variation]}
+`
+Button.defaultProps = {
+  variation: 'primary',
+  size: 'medium',
+}
+export default Button
