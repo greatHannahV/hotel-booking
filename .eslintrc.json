@@ -1,11 +1,8 @@
 {
-  "extends": ["react", "react-app", "plugin:react/recommended"],
+  "plugins": ["react"],
   "rules": {
-    "no-unused-vars": [
-      "error",
-      {
-        "varsIgnorePattern": "React"
-      }
-    ]
-  }
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error"
+  },
+  "extends": ["plugin:react/recommended"]
 }
