@@ -55,10 +55,12 @@ function CabinRow({ cabin }) {
     // mutationFn: (id) => deleteCabin(id),
     mutationFn: deleteCabin,
     onSuccess: () => {
+      alert('Successfuly deleted')
       queryClient.invalidateQueries({
         queryKey: ['cabins'],
       })
     },
+    onError: (err) => alert(err.message),
   })
 
   return (
