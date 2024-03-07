@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 import { useCreateCabin } from './useCreateCabin'
 import { useEditCabin } from './useEditCabin'
 
-function CreateCabinForm({ cabinToEdit = [], onCloseModal }) {
+function CreateCabinForm({ cabinToEdit = [], onCloseModal, onCloseForm }) {
   const { id: editId, ...editValue } = cabinToEdit
   const isEditSession = Boolean(editId)
   const { register, handleSubmit, reset, getValues, formState } = useForm({
@@ -30,6 +30,7 @@ function CreateCabinForm({ cabinToEdit = [], onCloseModal }) {
         {
           onSuccess: (data) => {
             reset()
+            onCloseForm?.()
           },
         },
       )
@@ -136,7 +137,7 @@ function CreateCabinForm({ cabinToEdit = [], onCloseModal }) {
         <Button
           variation="secondary"
           type="reset"
-          onClick={() => onCloseModal?.()}
+          onClick={() => onCloseModal?.() || onCloseForm?.()}
         >
           Cancel
         </Button>
