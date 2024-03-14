@@ -1,17 +1,18 @@
 import CreateCabinForm from './CreateCabinForm'
 import Button from '../../ui/Button'
 import Modal from '../../ui/Modal'
-import CabinTable from './CabinTable'
 function AddCabin() {
   return (
-    <Modal>
-      <Modal.Open opens="cabin-form">
-        <Button>Add a new cabin</Button>
-      </Modal.Open>
-      <Modal.Window name="cabin-form">
-        <CreateCabinForm />
-      </Modal.Window>
-    </Modal>
+    <div>
+      <Modal>
+        <Modal.Open opens="cabin-form">
+          <Button>Add a new cabin</Button>
+        </Modal.Open>
+        <Modal.Window name="cabin-form">
+          <CreateCabinForm />
+        </Modal.Window>
+      </Modal>
+    </div>
   )
 }
 export default AddCabin
