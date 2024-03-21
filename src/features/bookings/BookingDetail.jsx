@@ -20,15 +20,16 @@ const HeadingGroup = styled.div`
 
 function BookingDetail() {
   const { booking, isLoading } = useBooking()
-  const { status, id: bookingId } = booking
   const moveBack = useMoveBack()
+  if (isLoading) return <Spinner />
+  const { status, id: bookingId } = booking
+
   const statusToTagName = {
     unconfirmed: 'blue',
     'checked-in': 'green',
     'checked-out': 'silver',
   }
 
-  if (isLoading) return <Spinner />
   return (
     <>
       <Row type="horizontal">
@@ -39,7 +40,7 @@ function BookingDetail() {
         <ButtonText onClick={moveBack}>&larr; Back</ButtonText>
       </Row>
 
-      {/* <BookingDataBox booking={booking} /> */}
+      <BookingDataBox booking={booking} />
 
       <ButtonGroup>
         <Button variation="secondary" onClick={moveBack}>
