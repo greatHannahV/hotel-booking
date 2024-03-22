@@ -14,7 +14,7 @@ import { useBooking } from '../bookings/useBooking'
 import Spinner from '../../ui/Spinner'
 import { useEffect, useState } from 'react'
 import { formatCurrency } from '../../utils/helpers'
-import { useCheckin } from './useChekin'
+import { useCheckin } from './useCheckin'
 import { useSettings } from '../settings/useSettings'
 
 const Box = styled.div`
@@ -114,6 +114,7 @@ function CheckinBooking() {
         <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckin}>
           Check in booking #{bookingId}
         </Button>
+
         <Button variation="secondary" onClick={moveBack}>
           Back
         </Button>
