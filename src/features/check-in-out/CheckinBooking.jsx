@@ -47,7 +47,6 @@ function CheckinBooking() {
     numGuests,
     hasBreakfast,
     numNights,
-    status,
   } = booking
 
   const optinalBreakfastPrice = settings?.breakfastPrice * numNights * numGuests
