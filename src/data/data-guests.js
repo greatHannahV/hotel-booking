@@ -10,6 +10,20 @@ export const guests = [
     countryFlag: 'https://flagcdn.com/pt.svg',
   },
   {
+    fullName: 'Jon Smith',
+    email: 'johnsmith@test.eu',
+    nationality: 'Great Britain',
+    nationalID: '4534593454',
+    countryFlag: 'https://flagcdn.com/gb.svg',
+  },
+  {
+    fullName: 'Jonathan Smi',
+    email: 'johnsmith@test.eu',
+    nationality: 'Great Britain',
+    nationalID: '4534593454',
+    countryFlag: 'https://flagcdn.com/gb.svg',
+  },
+  {
     fullName: 'Jonathan Smith',
     email: 'johnsmith@test.eu',
     nationality: 'Great Britain',
@@ -214,4 +228,4 @@ export const guests = [
     nationalID: '3456117890',
     countryFlag: 'https://flagcdn.com/tw.svg',
   },
-];
+]
